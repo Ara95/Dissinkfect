@@ -11,10 +11,18 @@ import {
   BarChart3,
   Phone,
   MapPin,
+  X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 export default function LandingPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   return (
     <div className="flex min-h-screen flex-col">
       {/* Header */}
@@ -38,10 +46,10 @@ export default function LandingPage() {
               Benefits
             </Link>
             <Link
-              href="#testimonials"
+              href="#howitworks"
               className="text-sm font-medium hover:text-primary"
             >
-              Testimonials
+              How it works
             </Link>
             {/* <Link
               href="#pricing"
@@ -59,26 +67,81 @@ export default function LandingPage() {
           <Button asChild className="hidden md:inline-flex">
             <Link href="#contact">Contact Us</Link>
           </Button>
-          <Button variant="outline" size="icon" className="md:hidden">
-            <span className="sr-only">Menu</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6"
-            >
-              <line x1="4" x2="20" y1="12" y2="12" />
-              <line x1="4" x2="20" y1="6" y2="6" />
-              <line x1="4" x2="20" y1="18" y2="18" />
-            </svg>
+          <Button
+            variant="outline"
+            size="icon"
+            className="md:hidden"
+            onClick={toggleMobileMenu}
+          >
+            <span className="sr-only">Meny</span>
+            {mobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-6 w-6"
+              >
+                <line x1="4" x2="20" y1="12" y2="12" />
+                <line x1="4" x2="20" y1="6" y2="6" />
+                <line x1="4" x2="20" y1="18" y2="18" />
+              </svg>
+            )}
           </Button>
         </div>
+        {mobileMenuOpen && (
+          <div className="md:hidden">
+            <div className="flex flex-col space-y-3 px-4 py-4 bg-background border-t">
+              <Link
+                href="#features"
+                className="text-sm font-medium py-2 hover:text-primary"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Features
+              </Link>
+              <Link
+                href="#benefits"
+                className="text-sm font-medium py-2 hover:text-primary"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Benefits
+              </Link>
+              {/* <Link
+                href="#testimonials"
+                className="text-sm font-medium py-2 hover:text-primary"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Referenser
+              </Link> */}
+              <Link
+                href="#howitworks"
+                className="text-sm font-medium py-2 hover:text-primary"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                How it works
+              </Link>
+              {/* <Link
+                href="#contact"
+                className="text-sm font-medium py-2 hover:text-primary"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </Link> */}
+              <Button asChild className="mt-2 w-full">
+                <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>
+                  Contact
+                </Link>
+              </Button>
+            </div>
+          </div>
+        )}
       </header>
 
       <main className="flex-1">
@@ -326,7 +389,7 @@ export default function LandingPage() {
         </section>
 
         {/* How It Works */}
-        <section className="py-16 bg-white">
+        <section id="howitworks" className="py-16 bg-white">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">
