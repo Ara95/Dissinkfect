@@ -547,8 +547,8 @@ export default function LandingPage() {
                   <div>
                     <h3 className="font-bold mb-1">Phone</h3>
                     <p>Sales and Technology: Navid Tajhizi, +46 73-534 66 69</p>
-                    <p>Contact: Natanael Berntsson, +46 70-795 61 74</p>
                     <p>Science: Åsa Melhus, +46 72-391 05 16</p>
+                    <p>Contact: Natanael Berntsson, +46 70-795 61 74</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
