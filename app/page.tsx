@@ -95,10 +95,10 @@ export default function LandingPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-4">
                 <Button asChild size="lg" className="gap-2">
-                  <Link href="#contact">
+                  {/* <Link href="#contact">
                     Request a Demo
                     <ChevronRight className="h-4 w-4" />
-                  </Link>
+                  </Link> */}
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link href="#features">Learn More</Link>
@@ -167,13 +167,13 @@ export default function LandingPage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="bg-white p-8 rounded-xl shadow-lg">
+              <div className="bg-white p-4 rounded-xl shadow-lg">
                 <Image
-                  src="../public/sink.png"
+                  src="/handfat.jpg"
                   alt="Dissinkfect sink system"
                   width={500}
                   height={400}
-                  className="rounded-lg mb-6 w-full"
+                  className="rounded-lg mb-1 w-full"
                 />
               </div>
               <div className="space-y-6">
@@ -528,8 +528,7 @@ export default function LandingPage() {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
               <p className="text-lg text-muted-foreground">
-                Reach out to learn more about Dissinkfect® or to request a
-                demonstration.
+                Reach out to learn more about Dissinkfect®.
               </p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -627,7 +626,7 @@ export default function LandingPage() {
                 infections now and in the future.
               </p>
             </div>
-            <div>
+            {/* <div>
               <h3 className="font-bold mb-4">Product</h3>
               <ul className="space-y-2">
                 <li>
@@ -655,8 +654,8 @@ export default function LandingPage() {
                   </Link>
                 </li>
               </ul>
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <h3 className="font-bold mb-4">Company</h3>
               <ul className="space-y-2">
                 <li>
@@ -684,8 +683,8 @@ export default function LandingPage() {
                   </Link>
                 </li>
               </ul>
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <h3 className="font-bold mb-4">Legal Information</h3>
               <ul className="space-y-2">
                 <li>
@@ -713,7 +712,7 @@ export default function LandingPage() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
