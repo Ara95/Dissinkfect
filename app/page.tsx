@@ -22,7 +22,7 @@ export default function LandingPage() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Droplets className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">Dissinkfect</span>
+            <span className="text-xl font-bold">Dissinkfect®</span>
           </div>
           <nav className="hidden md:flex gap-6">
             <Link
