@@ -120,10 +120,10 @@ export default function LandingPage() {
               </h2>
               <p className="text-lg text-muted-foreground">
                 Healthcare-associated infections (HAIs) remain a persistent
-                challenge in healthcare. Since the first point prevalence study
-                conducted in 2003, the HAI rate has hovered around 10%. The
-                highest incidence of HAIs occurs in intensive care units, at
-                19.0%.
+                challenge in healthcare. Since the first SWEDISH point
+                prevalence study conducted in 2003, the HAI rate has hovered
+                around 10%. The highest incidence of HAIs occurs in intensive
+                care units, at 19.0%.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -142,9 +142,7 @@ export default function LandingPage() {
               <div className="bg-blue-50 p-6 rounded-lg">
                 <Shield className="h-10 w-10 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2">4+ days</h3>
-                <p>
-                  Extended hospital stay due to healthcare-associated infections
-                </p>
+                <p>Extended hospital stay, on average, due to a single HAI</p>
               </div>
             </div>
           </div>
@@ -204,11 +202,7 @@ export default function LandingPage() {
                     </h3>
                     <p className="text-muted-foreground">
                       Since 2019, Dissinkfect® has been installed at the Burn
-                      Center at Linköping University Hospital. Prior to
-                      installation, it was tested in a clinical microbiology
-                      laboratory with various reference and patient strains,
-                      including MRSA, VRE, and multidrug-resistant P.
-                      aeruginosa, E. coli, and K. pneumoniae.
+                      Center at Linköping University Hospital.
                     </p>
                   </div>
                 </div>
@@ -259,14 +253,29 @@ export default function LandingPage() {
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>
-                      Bacterial growth was observed in only 20% of cultures with
-                      Dissinkfect®, compared to up to 91% in regular sinks
-                    </span>
+                    <div>
+                      <span>
+                        Bacterial growth was observed in only 20% of cultures
+                        with Dissinkfect®, compared to up to 91% in regular
+                        sinks.
+                      </span>
+                      <span className="block text-xs italic mt-1 text-muted-foreground">
+                        (Gideskog M, Falkeborn T, Welander J, Melhus Å. Source
+                        Control of Gram-Negative Bacteria Using
+                        Self-Disinfecting Sinks in a Swedish Burn Centre.
+                        Microorganisms. 2023 Apr 7;11(4):965. doi:
+                        10.3390/microorganisms11040965.)
+                      </span>
+                    </div>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Prevents biofilm formation</span>
+                    <span>
+                      Prior to installation, it was tested in a clinical
+                      microbiology laboratory with various reference and patient
+                      strains, including MRSA, VRE, and multidrug-resistant P.
+                      aeruginosa, E. coli, and K. pneumoniae.
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -322,7 +331,7 @@ export default function LandingPage() {
                 How Dissinkfect® Works
               </h2>
               <p className="text-lg text-muted-foreground">
-                Our patented technology uses heat to eliminate bacteria and
+                Our proprietary technology uses heat to eliminate bacteria and
                 prevent biofilm formation.
               </p>
             </div>
@@ -537,11 +546,9 @@ export default function LandingPage() {
                   <Phone className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-bold mb-1">Phone</h3>
-                    <p>
-                      Sales and Technology: +46 73-534 66 69 (Navid Tajhizi)
-                    </p>
-                    <p>Contact: +46 70-795 61 74 (Natanael Berntsson)</p>
-                    <p>Science: +46 72-391 05 16 (Åsa Melhus)</p>
+                    <p>Sales and Technology: Navid Tajhizi, +46 73-534 66 69</p>
+                    <p>Contact: Natanael Berntsson, +46 70-795 61 74</p>
+                    <p>Science: Åsa Melhus, +46 72-391 05 16</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
