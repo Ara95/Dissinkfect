@@ -136,7 +136,7 @@ export default function LandingPage() {
               </Link> */}
               <Button asChild className="mt-2 w-full">
                 <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>
-                  Contact
+                  Contact Us
                 </Link>
               </Button>
             </div>
