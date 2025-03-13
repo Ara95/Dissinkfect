@@ -120,7 +120,7 @@ export default function LandingPage() {
               </h2>
               <p className="text-lg text-muted-foreground">
                 Healthcare-associated infections (HAIs) remain a persistent
-                challenge in healthcare. Since the first SWEDISH point
+                challenge in healthcare. Since the first Swedish point
                 prevalence study conducted in 2003, the HAI rate has hovered
                 around 10%. The highest incidence of HAIs occurs in intensive
                 care units, at 19.0%.
@@ -142,7 +142,9 @@ export default function LandingPage() {
               <div className="bg-blue-50 p-6 rounded-lg">
                 <Shield className="h-10 w-10 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2">4+ days</h3>
-                <p>Extended hospital stay, on average, due to a single HAI</p>
+                <p>
+                  Extended hospital stay, on average, due to one a single HAI
+                </p>
               </div>
             </div>
           </div>
@@ -201,8 +203,8 @@ export default function LandingPage() {
                       Clinically Validated
                     </h3>
                     <p className="text-muted-foreground">
-                      Since 2019, Dissinkfect® has been installed at the Burn
-                      Center at Linköping University Hospital.
+                      Since 2019, Dissinkfect® has been installed at the
+                      Intensive Care Unit, Linköping University Hospital.
                     </p>
                   </div>
                 </div>
@@ -364,8 +366,8 @@ export default function LandingPage() {
                   Complete Disinfection
                 </h3>
                 <p>
-                  The 20-minute cycle eliminates bacteria and biofilms, creating
-                  a safe environment for patients and staff.
+                  The cycle eliminates bacteria and biofilms, creating a safe
+                  environment for patients and staff.
                 </p>
               </div>
             </div>
