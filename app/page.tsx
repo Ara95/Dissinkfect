@@ -205,9 +205,7 @@ export default function LandingPage() {
               <div className="bg-blue-50 p-6 rounded-lg">
                 <Shield className="h-10 w-10 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2">4+ days</h3>
-                <p>
-                  Extended hospital stay, on average, due to one a single HAI
-                </p>
+                <p>Extended hospital stay, on average, due to one single HAI</p>
               </div>
             </div>
           </div>
