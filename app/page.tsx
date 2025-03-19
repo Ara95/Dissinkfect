@@ -30,6 +30,14 @@ export default function LandingPage() {
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Image
+              style={{ marginRight: -10 }}
+              src="/medicalicon.png"
+              alt="SteamForce Medical Logo"
+              width={30} // Reduced width for better fit in header
+              height={40} // Adjusted height to maintain aspect ratio
+              className="object-contain"
+            />
+            <Image
               src="/steamforcemedical.png"
               alt="SteamForce Medical Logo"
               width={200} // Reduced width for better fit in header
