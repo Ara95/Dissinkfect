@@ -31,17 +31,17 @@ export default function LandingPage() {
           <div className="flex items-center gap-2">
             <Image
               style={{ marginRight: -10 }}
-              src="/medicalicon.png"
+              src="/medicalicon.png" // Path to the logo in the public directory
               alt="SteamForce Medical Logo"
-              width={30} // Reduced width for better fit in header
-              height={40} // Adjusted height to maintain aspect ratio
+              width={30} // Adjust the width as needed
+              height={10} // Adjust the height as needed
               className="object-contain"
             />
             <Image
-              src="/steamforcemedical.png"
+              src="/steamforcemedical.png" // Path to the logo in the public directory
               alt="SteamForce Medical Logo"
-              width={200} // Reduced width for better fit in header
-              height={40} // Adjusted height to maintain aspect ratio
+              width={250} // Adjust the width as needed
+              height={10} // Adjust the height as needed
               className="object-contain"
             />
           </div>
@@ -64,6 +64,18 @@ export default function LandingPage() {
             >
               How it works
             </Link>
+            {/* <Link
+              href="#pricing"
+              className="text-sm font-medium hover:text-primary"
+            >
+              Pricing
+            </Link> */}
+            {/* <Link
+              href="#contact"
+              className="text-sm font-medium hover:text-primary"
+            >
+              Contact
+            </Link> */}
           </nav>
           <Button asChild className="hidden md:inline-flex">
             <Link href="#contact">Contact Us</Link>
@@ -74,7 +86,7 @@ export default function LandingPage() {
             className="md:hidden"
             onClick={toggleMobileMenu}
           >
-            <span className="sr-only">Menu</span>
+            <span className="sr-only">Meny</span>
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
@@ -114,6 +126,13 @@ export default function LandingPage() {
               >
                 Benefits
               </Link>
+              {/* <Link
+                href="#testimonials"
+                className="text-sm font-medium py-2 hover:text-primary"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Referenser
+              </Link> */}
               <Link
                 href="#howitworks"
                 className="text-sm font-medium py-2 hover:text-primary"
@@ -121,6 +140,13 @@ export default function LandingPage() {
               >
                 How it works
               </Link>
+              {/* <Link
+                href="#contact"
+                className="text-sm font-medium py-2 hover:text-primary"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </Link> */}
               <Button asChild className="mt-2 w-full">
                 <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>
                   Contact Us
@@ -138,6 +164,7 @@ export default function LandingPage() {
             <div className="flex flex-col gap-4 md:w-1/2">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 <Image
+                  style={{ marginLeft: -7 }}
                   src="/dissinkefect.png"
                   alt="Dissinkfect Logo"
                   width={300} // Adjusted width to match heading size
@@ -204,6 +231,43 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* Problem Statement */}
+        <section className="py-16 bg-white">
+          <div className="container">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">
+                Healthcare-Associated Infections: A Persistent Problem
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Healthcare-associated infections (HAIs) remain a persistent
+                challenge in healthcare. Since the first Swedish point
+                prevalence study conducted in 2003, the HAI rate has hovered
+                around 10%. The highest incidence of HAIs occurs in intensive
+                care units, at 19.0%.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <BarChart3 className="h-10 w-10 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-2">10%</h3>
+                <p>
+                  of patients are affected by healthcare-associated infections
+                </p>
+              </div>
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <Zap className="h-10 w-10 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-2">SEK 8.4 billion</h3>
+                <p>Annual cost of healthcare-associated infections</p>
+              </div>
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <Shield className="h-10 w-10 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-2">4+ days</h3>
+                <p>Extended hospital stay, on average, due to one single HAI</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Features Section */}
         <section
           id="features"
@@ -211,18 +275,8 @@ export default function LandingPage() {
         >
           <div className="container">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4 flex items-center justify-center gap-2">
-                <Image
-                  style={{ marginTop: 3.5 }}
-                  src="/dissinkefect.png"
-                  alt="Dissinkfect Logo"
-                  width={220} // Adjusted width to match heading size
-                  height={10} // Adjusted height to match heading size
-                  className="inline-block align-middle object-contain"
-                />
-                <span className="inline-block align-middle">
-                  : The Solution
-                </span>
+              <h2 className="text-3xl font-bold mb-4">
+                Dissinkfect® The Solution
               </h2>
               <p className="text-lg text-muted-foreground">
                 Our innovative self-disinfecting sink system eliminates bacteria
@@ -298,17 +352,8 @@ export default function LandingPage() {
         <section id="benefits" className="py-16 bg-blue-50">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4 flex items-center justify-center gap-2">
-                <span className="inline-block align-middle">Why Choose</span>
-                <Image
-                  style={{ marginTop: 3.5 }}
-                  src="/dissinkefect.png"
-                  alt="Dissinkfect Logo"
-                  width={220} // Adjusted width to match heading size
-                  height={40} // Adjusted height to match heading size
-                  className="inline-block align-middle object-contain"
-                />
-                <span className="inline-block align-middle">?</span>
+              <h2 className="text-3xl font-bold mb-4">
+                Why Choose Dissinkfect®?
               </h2>
               <p className="text-lg text-muted-foreground">
                 Our system offers significant advantages over traditional sinks
@@ -402,17 +447,8 @@ export default function LandingPage() {
         <section id="howitworks" className="py-16 bg-white">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4 flex items-center justify-center gap-2">
-                <span className="inline-block align-middle">How</span>
-                <Image
-                  style={{ marginTop: 3.5 }}
-                  src="/dissinkefect.png"
-                  alt="Dissinkfect Logo"
-                  width={220} // Adjusted width to match heading size
-                  height={40} // Adjusted height to match heading size
-                  className="inline-block align-middle object-contain"
-                />
-                <span className="inline-block align-middle">Works</span>
+              <h2 className="text-3xl font-bold mb-4">
+                How Dissinkfect® Works
               </h2>
               <p className="text-lg text-muted-foreground">
                 Our proprietary technology uses heat to eliminate bacteria and
@@ -455,6 +491,165 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
+
+        {/* Testimonials */}
+        {/* <section
+          id="testimonials"
+          className="py-16 bg-gradient-to-b from-blue-50 to-white"
+        >
+          <div className="container">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">
+                What Healthcare Professionals Say
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Dissinkfect® is used by leading healthcare institutions.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white p-8 rounded-lg shadow-sm border">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-xl font-bold text-primary">L</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold">
+                      Linköping University Hospital
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      Burn Center
+                    </p>
+                  </div>
+                </div>
+                <p className="italic">
+                  "Nowadays, the most severely burned patients are often placed
+                  in room 1, where the self-disinfecting sinks are located, to
+                  reduce the risk of infection."
+                </p>
+              </div>
+              <div className="bg-white p-8 rounded-lg shadow-sm border">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-xl font-bold text-primary">U</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold">
+                      Uppsala University Hospital
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      Medical Technology Department
+                    </p>
+                  </div>
+                </div>
+                <p className="italic">
+                  "A risk analysis of Dissinkfect® was conducted at the Medical
+                  Technology Department at Uppsala University Hospital. The
+                  product is CE-marked."
+                </p>
+              </div>
+            </div>
+          </div>
+        </section> */}
+
+        {/* Pricing */}
+        {/* <section id="pricing" className="py-16 bg-white">
+          <div className="container">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">
+                Investment in Patient Safety
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Choose the solution that best fits your facility's needs.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <div className="bg-white p-8 rounded-lg shadow-md border border-primary/20">
+                <h3 className="text-xl font-bold mb-2">Complete System</h3>
+                <p className="text-muted-foreground mb-6">
+                  Full Dissinkfect® sink and trap system
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>Electropolished stainless steel sink</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>Industrial-grade trap system</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>Automated disinfection system</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>2-year warranty</span>
+                  </li>
+                </ul>
+                <Button asChild className="w-full">
+                  <Link href="#contact">Request a Quote</Link>
+                </Button>
+              </div>
+              <div className="bg-white p-8 rounded-lg shadow-md border border-primary/20">
+                <h3 className="text-xl font-bold mb-2">Trap-Only Solution</h3>
+                <p className="text-muted-foreground mb-6">
+                  For installation with existing sinks
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>Compatible with standard sinks</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>Industrial-grade trap system</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>Automated disinfection system</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>2-year warranty</span>
+                  </li>
+                </ul>
+                <Button asChild className="w-full">
+                  <Link href="#contact">Request a Quote</Link>
+                </Button>
+              </div>
+              <div className="bg-primary/5 p-8 rounded-lg shadow-md border border-primary">
+                <div className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium inline-block mb-4">
+                  Recommended
+                </div>
+                <h3 className="text-xl font-bold mb-2">Service Package</h3>
+                <p className="text-muted-foreground mb-6">
+                  Complete system with annual maintenance
+                </p>
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>Complete Dissinkfect® system</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>Annual maintenance service</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>Priority technical support</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>Replacement unit during repairs</span>
+                  </li>
+                </ul>
+                <Button asChild className="w-full">
+                  <Link href="#contact">Request a Quote</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section> */}
 
         {/* Contact */}
         <section id="contact" className="py-16 bg-blue-50">
@@ -549,10 +744,11 @@ export default function LandingPage() {
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <Image
-                  src="/steamforcemedical2.png"
+                  style={{ marginLeft: -23 }}
+                  src="/steamforcemedical2.png" // Path to the logo in the public directory
                   alt="SteamForce Medical Logo"
-                  width={250} // Adjusted width for better fit in footer
-                  height={60} // Adjusted height to maintain aspect ratio
+                  width={400} // Adjust the width as needed
+                  height={100} // Adjust the height as needed
                   className="object-contain"
                 />
               </div>
@@ -563,6 +759,93 @@ export default function LandingPage() {
                 infections now and in the future.
               </p>
             </div>
+            {/* <div>
+              <h3 className="font-bold mb-4">Product</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="#features"
+                    className="text-sm text-muted-foreground hover:text-foreground"
+                  >
+                    Features
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#benefits"
+                    className="text-sm text-muted-foreground hover:text-foreground"
+                  >
+                    Benefits
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#pricing"
+                    className="text-sm text-muted-foreground hover:text-foreground"
+                  >
+                    Pricing
+                  </Link>
+                </li>
+              </ul>
+            </div> */}
+            {/* <div>
+              <h3 className="font-bold mb-4">Company</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="#"
+                    className="text-sm text-muted-foreground hover:text-foreground"
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="text-sm text-muted-foreground hover:text-foreground"
+                  >
+                    Research
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#contact"
+                    className="text-sm text-muted-foreground hover:text-foreground"
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div> */}
+            {/* <div>
+              <h3 className="font-bold mb-4">Legal Information</h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="#"
+                    className="text-sm text-muted-foreground hover:text-foreground"
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="text-sm text-muted-foreground hover:text-foreground"
+                  >
+                    Terms of Use
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="text-sm text-muted-foreground hover:text-foreground"
+                  >
+                    Cookie Policy
+                  </Link>
+                </li>
+              </ul>
+            </div> */}
           </div>
           <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
