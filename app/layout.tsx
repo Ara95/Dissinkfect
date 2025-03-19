@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Dissinkfect",
+  title: "Steamforce Medical",
   description: "Dissinkfect",
   generator: "v0.dev",
 };
