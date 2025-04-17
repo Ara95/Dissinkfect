@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import ReactPlayer from "react-player";
 
 export default function LandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -194,42 +195,25 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Problem Statement */}
-        <section className="py-16 bg-white">
+        {/* SVT SECTION */}
+        {/* <section className="py-16 bg-white">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">
-                Healthcare-Associated Infections: A Persistent Problem
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Healthcare-associated infections (HAIs) remain a persistent
-                challenge in healthcare. Since the first Swedish point
-                prevalence study conducted in 2003, the HAI rate has hovered
-                around 10%. The highest incidence of HAIs occurs in intensive
-                care units, at 19.0%.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <BarChart3 className="h-10 w-10 text-primary mb-4" />
-                <h3 className="text-xl font-bold mb-2">10%</h3>
-                <p>
-                  of patients are affected by healthcare-associated infections
-                </p>
+              <div className="max-w-3xl mx-auto text-center mb-12">
+                <h2 className="text-3xl font-bold mb-4">
+                  Healthcare-Associated Infections: A Persistent Problem
+                </h2>
               </div>
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <Zap className="h-10 w-10 text-primary mb-4" />
-                <h3 className="text-xl font-bold mb-2">SEK 8.4 billion</h3>
-                <p>Annual cost of healthcare-associated infections</p>
-              </div>
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <Shield className="h-10 w-10 text-primary mb-4" />
-                <h3 className="text-xl font-bold mb-2">4+ days</h3>
-                <p>Extended hospital stay, on average, due to one single HAI</p>
-              </div>
+              <iframe
+                className="max-w-3xl mx-auto text-center mb-12"
+                src="https://www.svt.se/nyheter/lokalt/orebro/handfatet-fran-orebro-ska-minskar-smittspridning-av-farliga-bakterier"
+                width="600"
+                height="315"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Problem Statement */}
         <section className="py-16 bg-white">
